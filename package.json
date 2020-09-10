@@ -1,0 +1,36 @@
+{
+  "name": "pdf-template-parse",
+  "version": "0.0.3",
+  "description": "A JavaScript frontend cross-browser compatible 'PDF parser w/ template engine' to convert pdf documents into organized data objects.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "pdfChars.js",
+    "pdfText.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomrule007/pdf-template-parse.js"
+  },
+  "keywords": [
+    "parse",
+    "parsing",
+    "pdf",
+    "template",
+    "pdfjs",
+    "pdf-parse",
+    "pdf-crawler",
+    "pdf-extract",
+    "pdf-extractor"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomrule007/pdf-template-parse/issues"
+  },
+  "homepage": "https://github.com/tomrule007/pdf-template-parse",
+  "dependencies": {
+    "crocks": "^0.12.4",
+    "deepmerge": "^4.2.2",
+    "pdfjs-dist": "^2.2.228"
+  }
+}
