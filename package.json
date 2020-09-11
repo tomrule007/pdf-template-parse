@@ -1,6 +1,6 @@
 {
   "name": "pdf-template-parse",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A JavaScript frontend cross-browser compatible 'PDF parser w/ template engine' to convert pdf documents into organized data objects.",
   "main": "index.js",
   "files": [

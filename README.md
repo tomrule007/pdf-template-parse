@@ -1,16 +1,28 @@
 # pdf-template-parse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tomrule007/pdf-text.js/blob/development/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/tomrule007/pdf-text.js/blob/development/CONTRIBUTING.md)
 
-## JS Front-end PDF parser with template engine to convert pdf documents into organized data objects
+JS Front-end PDF parser with template engine to convert pdf documents into organized data objects.
 
-Link to table parsing demo: [Click Here](https://pdftext.netlify.com/)
+Live Demo: [Click Here](https://pdftext.netlify.com/)
 
 ## Install
 
+Install with npm:
+
 ```bash
-$npm install pdf-template-parse
+npm install pdf-template-parse
 ```
 
-### pdfParse - just character & location extraction
+Install with yarn:
+
+```bash
+yarn add pdf-template-parse
+```
+
+## Introduction
+
+This module exposes two functions:
+
+1 - pdfParse (character & location extraction)
 
 ```js
 import { pdfParse } from 'pdf-template-parse';
@@ -18,7 +30,7 @@ import { pdfParse } from 'pdf-template-parse';
 
 `pdfParse` takes a `pdf` file and returns a promise. Promise resolves all the character data (character code, text, x, y, width) found in the provided document allowing the user to process the raw data themselves.
 
-### pdfTemplateParse - character extraction & templating
+2 - pdfTemplateParse (character extraction & templating)
 
 ```js
 import pdfTemplateParse from 'pdf-template-parse';
@@ -26,34 +38,34 @@ import pdfTemplateParse from 'pdf-template-parse';
 
 `pdfTemplateParse` takes a `pdf` file and a `template` file and returns a promise. Promise resolves all the values / tables declared in the template file. (see example below for sample template file)
 
-# Example Usage
+## Example Usage
 
-## Example 1: helloworld.pdf
+### Example 1: helloWorldDemo.pdf
 
-sample pdf download: [helloworld.pdf](/src/sampleFiles/helloworld.pdf)
+sample pdf download: [helloWorldDemo.pdf](https://pdftext.netlify.app/pdfs/helloWorldDemo.pdf)
 
 ```js
 import { pdfParse } from 'pdf-template-parse';
-import pdf from './samplePdf/helloWorld.pdf';
+import pdf from './samplePdf/helloWorldDemo.pdf';
 
 const characterData = pdfParse(pdf);
 console.log({ characterData });
 ```
 
 Output: (console screenshot)
-![example one console screenshot](/packages/pdf-template-parse/readmeImages/exampleOneOutput.png)
+![example one console screenshot](./readmeImages/exampleOneOutput.png)
 
 \*\* Note: the promise will not resolve if the browser tab is not visible.
 
-## Example 2: **helloworld.pdf w/ template file**
+## Example 2: **helloWorldDemo.pdf w/ template file**
 
-Template file: [helloworld.json](/src/sampleFiles/helloworld.json)
+Template file: [helloWorldDemo.json](https://pdftext.netlify.app/templates/helloWorldDemo.json)
 
 ```json
 {
   "captureList": [
     {
-      "name": "firstWord",
+      "name": "1",
       "type": "value",
       "rules": {
         "all": {
@@ -67,7 +79,7 @@ Template file: [helloworld.json](/src/sampleFiles/helloworld.json)
       }
     },
     {
-      "name": "secondWord",
+      "name": "2",
       "type": "value",
       "rules": {
         "all": {
@@ -81,7 +93,7 @@ Template file: [helloworld.json](/src/sampleFiles/helloworld.json)
       }
     },
     {
-      "name": "fullPhrase",
+      "name": "1+2",
       "type": "value",
       "rules": {
         "all": {
@@ -102,8 +114,8 @@ Code:
 
 ```js
 import pdfTemplateParse from 'pdf-template-parse';
-import pdf from './samplePdf/helloWorld.pdf';
-import template from './sampleFile/helloworld.json';
+import pdf from './samplePdf/helloWorldDemo.pdf';
+import template from './sampleFile/helloWorldDemo.json';
 
 const data = pdfTemplateParse(pdf, template);
 console.log({ data });
@@ -111,18 +123,17 @@ console.log({ data });
 
 Output: (console screenshot)
 
-![example two console screenshot](/packages/pdf-template-parse/readmeImages/exampleTwoOutput.png)
+![example two console screenshot](./readmeImages/exampleTwoOutput.png)
 
 \*\* Note: the promise will not resolve if the browser tab is not visible.
 
 # Todo
 
-- Add sampleTable.pdf example (to demo table parsing)
 - Add tests
 - Replace char_offset option with character map detection
 - Add value validation.
 - Add template validation.
-- Add node support (either remove canvas dependancy or add node canvas package)
+- Add node support (either remove canvas dependency or add node canvas package)
 
 ## Authors
 
