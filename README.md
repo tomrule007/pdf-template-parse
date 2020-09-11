@@ -1,4 +1,4 @@
-# pdf-template-parse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+# pdf-template-parse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md) [![Join the chat at https://gitter.im/pdf-template-parse/community](https://badges.gitter.im/pdf-template-parse/community.svg)](https://gitter.im/pdf-template-parse/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 A JavaScript frontend cross-browser compatible 'PDF parser w/ template engine' to convert pdf documents into organized data objects.
 
