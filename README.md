@@ -1,6 +1,6 @@
-# pdf-template-parse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tomrule007/pdf-text.js/blob/development/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/tomrule007/pdf-text.js/blob/development/CONTRIBUTING.md)
+# pdf-template-parse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
-JS Front-end PDF parser with template engine to convert pdf documents into organized data objects.
+A JavaScript frontend cross-browser compatible 'PDF parser w/ template engine' to convert pdf documents into organized data objects.
 
 Live Demo: [Click Here](https://pdftext.netlify.com/)
 
